@@ -10,6 +10,6 @@ class DetailController extends Controller
     public function index()
     {
         $items = Detail::all();
-        return view('index', compact('details'));
+        return view('index', ['items' => $items]);
     }
 }

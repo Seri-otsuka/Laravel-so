@@ -8,7 +8,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/index',[DetailController::class,'detail'])->name('detail');
+Route::get('/index',[DetailController::class,'index'])->name('detail');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

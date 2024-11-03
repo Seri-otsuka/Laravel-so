@@ -23,6 +23,9 @@
         <input type="date" id="start_date">〜<input type="date" id="last_date"><button id="display_btn">指定期間表示</button>
         <table id="hab_tb">
             <tr>
+                @foreach ($items as $item)
+                <p>{{ $item->name }}</p>
+                @endforeach
                 <th>日付</th>
                 <th>内容</th>
                 <th>金額</th>
