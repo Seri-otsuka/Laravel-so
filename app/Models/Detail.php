@@ -9,5 +9,13 @@ class Detail extends Model
 {
     use HasFactory;
 
-     
+    protected $fillable = [
+      'user_id',
+      'content',
+      'amount',
+    ];
+
+     public function users(){
+        return $this->hasMany(User::class);
+     }
 }

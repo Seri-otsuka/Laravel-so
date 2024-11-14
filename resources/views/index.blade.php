@@ -6,23 +6,35 @@
    <link rel="stylesheet" href="./household_account_book.css">
 </head>
 <body>
+    @foreach ($details as $detail)
+    {{ $detail->id }}<br>
+    {{ $detail->user_id }}<br>
+    {{ $detail->content }}<br>
+    {{ $detail->amount }}円<br>
+    {{ $detail->created_at->format('Y/m/d')}}
+    @endforeach
     <header>
         <h1>シンプル家計簿</h1>
     </header>
     <!-- 登録項目:日時,内容,金額 -->
     <div id="regist_spending">
         <h2>データ登録</h2>
+        <form method="POST" action="{{ route('detail')}}">
+            @csrf
         <table id="regist_data_tb">
-            <tr><td>登録日付</td><td><input type="date" id="regist_date"></td></tr>
-            <tr><td>登録内容</td><td><input type="text" id="regist_contents" required></td></tr>
-            <tr><td>金額</td><td><input type="number" id="regist_price" min="1"></td></tr>
-            <tr><td colspan="2"><button id="regist_spending_btn">登録</button></td></tr>
+            <tr>
+                <td>登録内容</td>
+                <td><input type="text" name="content" value="{{ old('content')}}" required></td>
+            </tr>
+            <tr>
+                <td>金額</td>
+                <td><input type="number" name="amount" value="{{ old('amount')}}" min="1"></td>
+            </tr>
+            <tr><td colspan="2"><button type="submit">登録</button></td></tr>
         </table>
+        </form>
     </div>
     <main>
-        @foreach ($items as $item)
-            <p>{{ $item->name }}</p>
-        @endforeach
         <input type="date" id="start_date">〜<input type="date" id="last_date"><button id="display_btn">指定期間表示</button>
         <table id="hab_tb">
             <tr>
