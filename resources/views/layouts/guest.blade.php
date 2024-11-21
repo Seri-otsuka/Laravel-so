@@ -18,7 +18,7 @@
         <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
             <div>
                 <a href="/">
-                    <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                    <img src="https://res.cloudinary.com/dq9ypnzdn/image/upload/v1729830771/%E3%81%8B%E3%81%91%E3%81%84%E3%81%AD%E3%81%93_vxuxm9.png" class="w-20 h-20 fill-current text-gray-500" />
                 </a>
             </div>
 
