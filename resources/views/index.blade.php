@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
    <meta charset="UTF-8">
    <title>シンプル家計簿</title>
-   <link rel="stylesheet" href="./household_account_book.css">
+   <link rel="stylesheet" href="{{ 'css/app.css' }}">
+   @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
     @foreach ($details as $detail)
@@ -13,6 +14,7 @@
     {{ $detail->amount }}円<br>
     {{ $detail->created_at->format('Y/m/d')}}
     @endforeach
+
     <header>
         <h1>シンプル家計簿</h1>
     </header>
@@ -45,7 +47,7 @@
         </table>
     </main>
 
-    <script>
+    {{-- <script>
         var date = new Date();
         
         // 「年月日」を配列で取得 ( [0]:年, [1]:月, [2]:日 )
@@ -391,6 +393,6 @@
         // 「指定期間表示」ボタンにイベントリスナーを設定
         getElmId("display_btn").addEventListener('click', onClickDisplayDesignatedPeriodDataBtn, false);
 
-    </script>
+    </script> --}}
 </body>
 </html>
