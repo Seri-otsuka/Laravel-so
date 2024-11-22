@@ -24,7 +24,7 @@
             </center>
             <!--よくわからないのでとりあえずセンターにもっていって文字はでかめでお願いします！-->
                  <div style="font-family: ravie,fantasy; center: 100%;  font-size: 400%;" class="flex justify-center">
-                kakeibo
+                kakeineko
                  </div>
                   <div class="flex justify-center">
                       

@@ -2,10 +2,10 @@
     <style>
             body {
             font-family: 'Arial', sans-serif;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
+            /* max-width: 800px; */
+            /* margin: 0 auto;
+            padding: 20px; */
+            background-color: #F3F4F6;
         }
 
         /* ヘッダーのスタイル */
