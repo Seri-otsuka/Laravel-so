@@ -247,7 +247,7 @@
                             document.write(printHtml);
                             </script>
                         </div>
-                        <button id="toggleButton">プロフィール</button>
+                        <a href="#!" class="btn btn-border" id="toggleButton"><span>プロフィール</span></a>
                     <img id="myImage" src="https://res.cloudinary.com/dq9ypnzdn/image/upload/v1730094961/profile_g85jkc.png" alt="plofile" style="display: none;" width="750" height="500">
                     <script>
                         const toggleButton = document.getElementById('toggleButton');
